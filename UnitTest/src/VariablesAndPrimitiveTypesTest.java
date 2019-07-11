@@ -18,7 +18,7 @@ class VariablesAndPrimitiveTypesTest {
 	}
 
 	@Test
-	void a_double_holds_a_precise_variable() {
+	void a_double_holds_a_precise_number() {
 		double aVariableHoldingAPreciseNumber = 3.14;
 		assertEquals(3.14,aVariableHoldingAPreciseNumber);
 	}
