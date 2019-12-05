@@ -1,0 +1,35 @@
+<checks>
+<check
+		title="Model Errors"
+      	modelfile="education-examples.rich"
+      	modelbasepath="//error"
+      	modelnamepath="@type"
+      	modelvaluepath="concat(//element[@id=current()/@element]/@name,' ',@name)"
+        modelerrorid="$p1/object/error/@errorID"
+      	inputfile="education-examples.rich"
+      	referencemodel="education-examples.rich"
+      	inputbasepath="//nonexistent"
+      	inputnamepath=""
+      	inputvaluepath=""
+        inputerrorid="$p1"
+        errorURL="concat('https://repository.kodekonveyor.com/TaskMarket/kode-konveyor/develop/index.html#',$p1)"
+        errortitlestring="zenta:modelErrorTitle($p1,$p4)"
+        errordescription="zenta:modelErrorDescription($p1,$p4,$p5)"
+      	/>
+<check
+		title="Unimplemented behaviours"
+      	modelfile="shippable/behaviours.xml"
+      	modelbasepath="//task[@status='open' or @status='should-make-issue']"
+      	modelnamepath="concat(@service,'/',@behaviour)"
+      	modelvaluepath="''"
+        modelerrorid="zenta:unimplementedErrorId($p1)"
+      	inputfile="shippable/behaviours.xml"
+      	inputbasepath="//nonexistent"
+      	inputnamepath=""
+      	inputvaluepath=""
+        inputerrorid="$p1"
+        errorURL="concat('https://repository.kodekonveyor.com/TaskMarket/kode-konveyor/develop/index.html#',$p1)"
+        errortitlestring="zenta:unimplementedErrorTitle($p1)"
+        errordescription="zenta:unimplementedErrorDescription($p1, $p2)"
+      	/>
+</checks>
